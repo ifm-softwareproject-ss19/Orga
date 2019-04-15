@@ -1,0 +1,5 @@
+# Softwareprojekt
+
+Als Basis für ein Rennspiel (oder für Spiele generell) ist die Unreal Engine von Epic Games sehr gut geeignet und wird bereits oft dafür genutzt. Man hat mit dieser Engine die Möglichkeit, grafisch ansprechende und performante Spiele zu erstellen, die man mit C++ programmieren kann. Zudem kann man systemübergreifende (auch mobile) Spiele erstellen und die Engine unterstützt Virtual Reality. Für kleinere (oder private) Projekte ist sie außerdem kostenlos verfügbar. Erst ab 3000$ Erlös pro Produkt pro Quartal muss man 5% von diesem für die Engine abgeben. 
+
+Eine weitere große Videospiel-Engine ist Unity von Unity Technologies. Auch auf dieser Engine kann man systemübergreifende Spiele erstellen. Für Unity programmiert man in C#, weshalb die Engine generell auch nicht so performant (und für gewöhnlich auch nicht so hübsch) wie die Unreal Engine ist. Bei einer kurzen Webrecherche habe ich außerdem kein großes Rennspiel gesehen, dass mit Unity erstellt wurde. Es gibt allerdings ein paar Tutorials über das Thema.
