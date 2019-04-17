@@ -12,3 +12,7 @@ maximale Flughöhe beträgt 100m
 ## Beispiele
 [Ryze tello  Preis: 100Euro Amazon](https://www.ryzerobotics.com/de/tello)
 Bietet ein SDK an, entwickelt wird in der Sprache Scratch
+
+[DJI Mavic Pro Preis ca 1000Euro](https://www.dji.com/de/mavic-pro-platinum?site=brandsite&from=nav)
+750gramm bieten sdk für untersch systeme an. 
+
