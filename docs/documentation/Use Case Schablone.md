@@ -1,9 +1,15 @@
 **Nr:**  
-**Name:**  
-**Akteur:**  
-**Trigger:**  
-**Kurzbeschreibung:**  
-**Essenziele Schritte:**  
-**Ausnahmefälle:**  
-**Fragen:**  
 
+**Name:**  
+
+**Akteur:**  
+
+**Trigger:**  
+
+**Kurzbeschreibung:**  
+
+**Essenziele Schritte:**  
+
+**Ausnahmefälle:**  
+
+**Fragen:**  
