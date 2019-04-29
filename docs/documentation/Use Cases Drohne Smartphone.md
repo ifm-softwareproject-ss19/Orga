@@ -33,7 +33,9 @@ Erneuter Verbindungsversuch
 
 **Vorbedingungen:** Drohne und App sind Betriebsbereit und miteinander verbunden über WIFI  
 
-**Essenziele Schritte:** User bestätigt starten Button in der App  Drohne startet und begibt sich auf voreingestellte Starthöhe  Wenn der Vorgang abgeschlossen ist, wird dem User eine Statusmeldung angezeigt  
+**Essenziele Schritte:** User bestätigt starten Button in der App  
+Drohne startet und begibt sich auf voreingestellte Starthöhe  
+Wenn der Vorgang abgeschlossen ist, wird dem User eine Statusmeldung angezeigt  
 
 **Ausnahmefälle:** Drohne startet nicht weil Akkustand zu niedrig. Statusmeldung wird auf der App angezeigt  
 
@@ -45,13 +47,17 @@ Erneuter Verbindungsversuch
 
 **Akteur:** User, Drohne, Smartphone  
 
-**Trigger:** User drückt den landen Button in der App   Akkustand der Drohne so niedrig, sodass sie automatisch den Landevorgang einleitet  Sprachbefehl landen  
+**Trigger:** User drückt den landen Button in der App   
+Akkustand der Drohne so niedrig, sodass sie automatisch den Landevorgang einleitet  
+Sprachbefehl landen  
 
 **Kurzbeschreibung:** Der User möchte die Drohne landen, um sie auszuschalten  
 
 **Vorbedingungen:** D 1, D 2  
 
-**Essenziele Schritte:** User bestätigt landen Button in der App  Drohne leitet Landevorgang ein  Wenn der Vorgang abgeschlossen ist, wird dem User eine Statusmeldung angezeigt  
+**Essenziele Schritte:** User bestätigt landen Button in der App  
+Drohne leitet Landevorgang ein
+Wenn der Vorgang abgeschlossen ist, wird dem User eine Statusmeldung angezeigt  
 
 **Ausnahmefälle:** kritischer Akkustand erreicht, wird automatischer Landevorgang eingeleitet und Statusmeldung ausgegeben auf der App  
 
@@ -63,15 +69,19 @@ Erneuter Verbindungsversuch
 
 **Akteur:** Drohne, User, Smartphone  
 
-**Trigger:** User drückt eines der Navigationsbuttons der App   Sprachbefehle  
+**Trigger:** User drückt eines der Navigationsbuttons der App  
+Sprachbefehle  
 
 **Kurzbeschreibung:** User möchte die Drohne im Raum navigieren, um andere Perspektiven zu bekommen  
 
 **Vorbedingungen:** D 1, D 2  
 
-**Essenziele Schritte:** User gibt Navigationsbefehle über die App an die Drohne  Drohne bewegt sich entsprechend  
+**Essenziele Schritte:** User gibt Navigationsbefehle über die App an die Drohne  
+Drohne bewegt sich entsprechend  
 
-**Ausnahmefälle:** Navigationsbefehl wird nicht durchgeführt aufgrund von Kolisionsgefahr  Verbindungsabbruch  App stürzt ab  
+**Ausnahmefälle:** Navigationsbefehl wird nicht durchgeführt aufgrund von Kolisionsgefahr  
+Verbindungsabbruch  
+App stürzt ab  
 
 ---
 
@@ -81,13 +91,16 @@ Erneuter Verbindungsversuch
 
 **Akteur:** Drohne, User, Smartphone  
 
-**Trigger:** User drückt Photo Button  Sprachbefehl Photo machen  
+**Trigger:** User drückt Photo Button  
+Sprachbefehl Photo machen  
 
 **Kurzbeschreibung:** User möchte ein Photo machen, um Daten von der Umgebung auswerten zu können  
 
 **Vorbedingungen:** D 1, D 2  
 
-**Essenziele Schritte:** User gibt den Befehl Photo machen an die Drohne  Drohne macht eine Aufnahme und sendet die Datei an das Smartphone  User bekommt Statusmeldung  
+**Essenziele Schritte:** User gibt den Befehl Photo machen an die Drohne  
+Drohne macht eine Aufnahme und sendet die Datei an das Smartphone  
+User bekommt Statusmeldung  
 
 **Ausnahmefälle:** Datei konnte nicht vollständig übertragen werden, auf der App wird dieser Status dem User angezeigt  
 
@@ -105,9 +118,11 @@ Erneuter Verbindungsversuch
 
 **Vorbedingungen:** D 1, D 2  
 
-**Essenziele Schritte:** Drohne startet Videoübertragung zum Smartphone über WIFI  Smartphone empfängt Daten und spielt das Video in Echtzeit ab auf der App  
+**Essenziele Schritte:** Drohne startet Videoübertragung zum Smartphone über WIFI  
+Smartphone empfängt Daten und spielt das Video in Echtzeit ab auf der App  
 
-**Ausnahmefälle:** Übertragungsprobleme: hohe Latenz, Verbindungsabbrüche, Störungen  Statusmeldung wird dem User ausgegeben  
+**Ausnahmefälle:** Übertragungsprobleme: hohe Latenz, Verbindungsabbrüche, Störungen  
+Statusmeldung wird dem User ausgegeben  
 
 ---
 
@@ -123,6 +138,8 @@ Erneuter Verbindungsversuch
 
 **Vorbedingungen:** D 1  
 
-**Essenziele Schritte:** App startet in regelmäßigen Abschnitten Anfragen an die Drohne  Drohne sendet Statusinformationen  App verarbeitet Informationen und zeigt sie auf dem Display an  
+**Essenziele Schritte:** App startet in regelmäßigen Abschnitten Anfragen an die Drohne  
+Drohne sendet Statusinformationen  
+App verarbeitet Informationen und zeigt sie auf dem Display an  
 
 **Ausnahmefälle:** Schlechte Verbindung zu Sateliten um GPS zu ermitteln  
