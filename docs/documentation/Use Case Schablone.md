@@ -8,6 +8,8 @@
 
 **Kurzbeschreibung:**  
 
+**Vorbedingungen:**  
+
 **Essenziele Schritte:**  
 
 **Ausnahmefälle:**  
