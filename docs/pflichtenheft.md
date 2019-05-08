@@ -46,21 +46,22 @@ Das Softwaresysem ist kein autonomes System und kann nicht automatisch einen ber
 
 ### 2.3.1 Rahmenbedingungen
 
-
-
 **Hardware**
 
 - Raspberry PI 3 b+
+    sensoren weiter aufteilen
+  - Bluetooth
 
 - DJI Spark
-- Android Kompatiblität
+  - Wlan
 
-
-
-    - Normen, Standards, Protokolle, externe Vorgaben
+- Smartphone
+  - Android
+  - Kamera
 
 ### 2.3.2 Betriebsbedingungen
-    - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
+
+Android version 7.1
 
 ### 2.3.3 Qualitätsmerkmale
 
@@ -97,23 +98,15 @@ Prüfbarkeit |-|-|X|-
     - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
     - Strukturierung der User Stories in funktionale Gruppen
 
-### Schablone für User Stories
-
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| Wer | Was | Warum | Wann akzeptiert |
-
-### Beispiel 1
-
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| Benutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann | Lösung wird angezeigt |
-
-### Beispiel 2
-
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
+| Drohne verbinden  |Benutzer| eine WLAN verbindung mit der Drohne aufbauen|ich app nutzen kann| Verbindung hergestellt | Muss |
+| Drohne starten  |Benutzer|Drohne starten|die Drohne steuern kann| Drohne starthöhe erreicht hat | Muss |
+| Drohne landen  |Benutzer|Drohne landen|ich Drohne abschalten kann| Drohne ladevorgang abgeschlossen hat| Muss |
+| Drohne navigieren  |Benutzer|Drohne lenken|ich Drohne stueerrn kann| Drohne position verändern kann| Muss |
+| Bild aufnehmen  |Benutzer|ein Photo machen|ich das Bild verarbeiten kann| Photo zum Smartphone gesendet wurde| Muss |
+| Video aufnehmen  |Benutzer|eine Aufnahme machen|ich das Video verarbeiten kann| Video zum Smartphone gesendet wurde| Muss |
+| GPS auslesen |Benutzer|die GPS Koordinaten der Drohen ausgegeben bekommen|die Daten wieterverarbeitet werden können| GPS wird auf dem Smartphone angezeigt| Muss |
 
 
 # 3 Technische Beschreibung
@@ -122,9 +115,8 @@ Prüfbarkeit |-|-|X|-
 
 ![Systemarchitektur](./img/systemarchitektur.svg)
 
-    - Kommunikationsprotokolle, Datenformate
-
 ## 3.2 Softwarearchitektur
+
 ![Softwarearchitektur](./img/softwarearchitektur.svg)
 
 ## 3.3 Schnittstellen
@@ -135,11 +127,12 @@ In diesem Projekt haben wir 2 Geräteschnittstellen.
     - Auflistung der nach außen sichtbaren Schnittstelle der Softwarebausteine
 
 ## 3.4 Datenmodell 
-    - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
-    - Modellierung des physikalischen Datenmodells 
-      - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+
+Keine Daten werden persistieren.
 
 ## 3.5 Abläufe
+
+Kommunikation 
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 
@@ -161,7 +154,11 @@ In diesem Projekt haben wir 2 Geräteschnittstellen.
 
 | Softwarebaustein | Person(en) |
 |----------|-----------|
-| Komponente A | Thomas Mustermann |
+| Drohnen Steuerung | Jakob Tissen | 
+| AR | Nick  |
+| Fahrzeugstruktur | Kevin Gerzen | 
+| Kollisionschecker | Andre Grellmann |
+  
 
 ### Rollen
 
@@ -178,21 +175,28 @@ Implementiert die funktionale Logik der Anwendung. Hierbei werden zudem diverse 
 
 | Name     | Rolle     |
 |----------|-----------|
-| Thomas Mustermann | Softwarearchitekt |
+| Alexander Heinisch | Projektleiter |
+| Nick |  |
+| AGrellmann |  |
+|  |  |
 
 
 ## 4.3 Grober Projektplan
     - Meilensteine
 
 ### Meilensteine
-* KW 43 (15.05)
+* KW 19 (12.05)
   * Abgabe Pflichtenheft
-* KW 44 (28.10) / Projekt aufsetzen
+* KW 20 (13.05) / Projekt aufsetzen
   * Repository Struktur
-* KW 45 (4.11) / Implementierung
-  * Implementierung #3 (Final)
-* KW 48 (18.12) / Abnahmetests
-  * manuelle Abnahmetestss
+* KW 23 (31.05) / Tests sind Fertig
+  * Spezifizieren 
+  * implementierung der Tests
+  * Testfälle laufen erfolgreich durch
+* KW 27 (26.06) / Implementation fertig
+  * manuelle Abnahmetests
+  * Verbindung der Systeme manuell testen
+* KW 28 (03.07) / Vorstellung
   * Präsentation / Software-Demo
 
 # 5 Anhänge
