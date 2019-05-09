@@ -12,7 +12,8 @@ Autoren:
 # 1 Einführung
 
 ## 1.1 Beschreibung
-    - Projektname
+
+
 Ein System womit ein Fahrzeug zu dem Standort einer Drohne fahren kann. In diesem System soll es möglich sein auf dem Smartphone visuell die position der Drohne bzw des Fahrzeuges zu sehen. 
 
 ## 1.2 Ziele
@@ -49,8 +50,8 @@ Das Softwaresysem ist kein autonomes System und kann nicht automatisch einen ber
 **Hardware**
 
 - Raspberry PI 3 b+
-    sensoren weiter aufteilen
   - Bluetooth
+  - Rasbian 
 
 - DJI Spark
   - Wlan
@@ -94,19 +95,29 @@ Prüfbarkeit |-|-|X|-
     - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
 
 ## 2.5 Anforderungen im Detail
-    - User Stories mit Akzeptanzkritierien 
-    - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-    - Strukturierung der User Stories in funktionale Gruppen
 
-| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
-|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Drohne verbinden  |Benutzer| eine WLAN verbindung mit der Drohne aufbauen|ich app nutzen kann| Verbindung hergestellt | Muss |
-| Drohne starten  |Benutzer|Drohne starten|die Drohne steuern kann| Drohne starthöhe erreicht hat | Muss |
-| Drohne landen  |Benutzer|Drohne landen|ich Drohne abschalten kann| Drohne ladevorgang abgeschlossen hat| Muss |
-| Drohne navigieren  |Benutzer|Drohne lenken|ich Drohne stueerrn kann| Drohne position verändern kann| Muss |
-| Bild aufnehmen  |Benutzer|ein Photo machen|ich das Bild verarbeiten kann| Photo zum Smartphone gesendet wurde| Muss |
-| Video aufnehmen  |Benutzer|eine Aufnahme machen|ich das Video verarbeiten kann| Video zum Smartphone gesendet wurde| Muss |
-| GPS auslesen |Benutzer|die GPS Koordinaten der Drohen ausgegeben bekommen|die Daten wieterverarbeitet werden können| GPS wird auf dem Smartphone angezeigt| Muss |
+**Drohne**
+
+| Kennung | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
+| --- |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
+| D1 | Drohne verbinden  |Benutzer| eine WLAN verbindung mit der Drohne aufbauen|ich app nutzen kann| Verbindung hergestellt | Muss |
+| D2 | GPS auslesen |Benutzer|die GPS Koordinaten der Drohen ausgegeben bekommen|die Daten wieterverarbeitet werden können| GPS wird auf dem Smartphone angezeigt| Muss |
+| D3 | Drohne starten  |Benutzer|Drohne starten|die Drohne steuern kann| Drohne starthöhe erreicht hat | Muss |
+| D4 | Drohne landen  |Benutzer|Drohne landen|ich Drohne abschalten kann| Drohne ladevorgang abgeschlossen hat| Muss |
+| D5 | Drohne navigieren  |Benutzer|Drohne lenken|ich Drohne stueerrn kann| Drohne position verändern kann| Muss |
+| D6 | Bild aufnehmen  |Benutzer|ein Photo machen|ich das Bild verarbeiten kann| Photo zum Smartphone gesendet wurde| Muss |
+| D7 | Video aufnehmen  |Benutzer|eine Aufnahme machen|ich das Video verarbeiten kann| Video zum Smartphone gesendet wurde| Muss |
+
+**Augmented Reality**
+
+| Kennung | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
+| :- |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
+| A1 | AR starten |Benutzer|die AR Funktion starten|ich die AR funktio nutzen kann| AR Bild angezeigt | Kann |
+| A2 | AR Marker setzen |Benutzer|mit der AR das Auto angezeigt haben|ich das Auto finden kann| AR Point vom Auto | Kann |
+| A3 | AR Pfad anzeigen |Benutzer|den Pfad des Autos sehen|damit ich den Pfad nachverfolgen kann| AR Pfad anzeigen | Kann |
+**Car**
+| Kennung | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
+| :- |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 
 
 # 3 Technische Beschreibung
@@ -121,10 +132,11 @@ Prüfbarkeit |-|-|X|-
 
 ## 3.3 Schnittstellen
 
-In diesem Projekt haben wir 2 Geräteschnittstellen.
+In der Software haben wir 
 
-    - Schnittstellenbeschreibung
-    - Auflistung der nach außen sichtbaren Schnittstelle der Softwarebausteine
+In diesem Projekt haben wir 2 Geräteschnittstellen.
+- eine Wlan Schnittstelle zur Drohne
+- eine Bluetooth Schnittstelle zum Fahrzeug
 
 ## 3.4 Datenmodell 
 
@@ -136,12 +148,16 @@ Kommunikation
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 
+![](./documentation/diagrams/MainCarActivities.svg)
+
 ## 3.6 Entwurf
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
 
 # 4 Projektorganisation
 
 ## 4.1 Annahmen
+
+
     - Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
     - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
     - Aufteilung in Git-Repositories gemäß Software- und Systemarchitektur und Softwarebbausteinen 
@@ -149,54 +165,70 @@ Kommunikation
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 
 ## 4.2 Verantwortlichkeiten
-    - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
-    - Rollendefinition und Zuordnung
 
 | Softwarebaustein | Person(en) |
 |----------|-----------|
 | Drohnen Steuerung | Jakob Tissen | 
-| AR | Nick  |
+| AR | Nick Friedrich |
 | Fahrzeugstruktur | Kevin Gerzen | 
 | Kollisionschecker | Andre Grellmann |
   
 
 ### Rollen
 
-#### Softwarearchitekt
-Entwirft den Aufbau von Softwaresystemen und trifft Entscheidungen über das Zusammenspiel der Softwarebausteine.
+#### Drohnenbeauftragter
+Entwickelt die Steuerung für die Drohne.
 
-#### Frontend-Entwickler
-Entwickelt graphische oder andere Benutzerschnittstellen, insbesondere das Layout einer Anwendung.
+#### AR Beauftragter
+Entwickelt die Augmented Reality funktionen.
 
-#### Backend-Entwickler
-Implementiert die funktionale Logik der Anwendung. Hierbei werden zudem diverse Datenquellen und externe Dienste integriert und für die Anwendung bereitgestellt.
+#### Fahrzeug Beauftragter
+Entwickelt eine Schnittstelle zum Steuern des Fahrzeuges.
+
+#### Fahrzeug Sensor Beauftragter
+Entwickelt eine Schnittstelle zum erkennen von Objekten vor dem Fahrzeug.
 
 ### Rollenzuordnung
 
 | Name     | Rolle     |
 |----------|-----------|
 | Alexander Heinisch | Projektleiter |
-| Nick |  |
-| AGrellmann |  |
-|  |  |
+| Nick Friedrich | Fahrzeug Sensor Beauftragter |
+| Andre Grellmann | AR Beauftragter |
+| Jakob Tissen | Drohnenbeauftragter |
+| Kevin Gerzen | Fahrzeug Beauftragter |
 
 
 ## 4.3 Grober Projektplan
-    - Meilensteine
 
 ### Meilensteine
 * KW 19 (12.05)
   * Abgabe Pflichtenheft
 * KW 20 (13.05) / Projekt aufsetzen
   * Repository Struktur
-* KW 23 (31.05) / Tests sind Fertig
-  * Spezifizieren 
-  * implementierung der Tests
+* KW 20 (19.05) / Grundfunktionalität
+  * D1, D2, D3, A1
+  * Tests sind spezifiziert 
+  * Tests laufen erfolgreich durch
+* KW 21 (26.05) / Erste Starts
+  * D4, D5, D6, A2
+  * Tests sind spezifiziert
+  * Tests laufen erfolgreich durch
+* KW 22 (31.05) / Tests sind Fertig
+  * Alle Tests
+  * Tests sind Spezifiziert 
+  * Tests sind implementiert
   * Testfälle laufen erfolgreich durch
-* KW 27 (26.06) / Implementation fertig
+* KW 23 (07.06) / Erste Verbindungen 
+  * Drohne sendet GPS an Fahrzeug
+  * Fahrzeug kann diese Auswerten
+  * AR Zeigt Fahrzeug position an
+* KW 24 (14.06) / Feld Test
+  * Feld Test
+* KW 26 (26.06) / Implementation fertig
   * manuelle Abnahmetests
   * Verbindung der Systeme manuell testen
-* KW 28 (03.07) / Vorstellung
+* KW 27 (03.07) / Vorstellung
   * Präsentation / Software-Demo
 
 # 5 Anhänge
