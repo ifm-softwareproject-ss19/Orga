@@ -4,10 +4,10 @@ Autoren:
 
 - Alexander Heinisch
 
+Source Repositories
 
-
-* Link zum Source Code Repository folgt
-
+- [Fahrzeugsteuerung für den Raspberry](https://github.com/ifm-softwareproject-ss19/Raspberry)
+- [Android App](https://github.com/ifm-softwareproject-ss19/Android)
 
 # 1 Einführung
 
@@ -36,12 +36,156 @@ Das Softwaresysem ist kein autonomes System und kann nicht automatisch einen ber
 
 ## 2.2 Funktionale Anforderungen
 
+### Drohne
+
+**Nr:** D 1  
+**Name:** Drohne verbinden  
+**Akteur:** User, Smartphone,App , Drohne  
+**Trigger:** Startvorgang App  Verbinden Button in der App  Sprachbefehl verbinden  
+**Kurzbeschreibung:** Der User möchte eine WIFI Verbindung zwischen Drohen und Smartphone herstellen,   damit er die Funktionen der App nutzen kann.
+**Vorbedingung:** Drohne und Smarthpone sind betriebsbereit  
+**Essenziele Schritte:** User macht Drohne und Smartphone betriebsbereit  
+User startet App auf dem Smartphone  
+App zeigt Status der WIFI Verbindung zur Drohne an  
+**Ausnahmefälle:** Verbindung kann nicht hergestellt werden  
+App zeigt Status an  
+Erneuter Verbindungsversuch  
+
+**Nr:** D 2  
+**Name:** Drohne starten  
+**Akteur:** User, Drohne, Smartphone  
+**Trigger:** User drückt den starten Button in der App  Sprachbefehl starten  
+**Kurzbeschreibung:** Der User möchte die Drohne mit der App starten, um ein Bild zu machen  
+**Vorbedingungen:** Drohne und App sind Betriebsbereit und miteinander verbunden über WIFI  
+**Essenziele Schritte:** User bestätigt starten Button in der App  
+Drohne startet und begibt sich auf voreingestellte Starthöhe  
+Wenn der Vorgang abgeschlossen ist, wird dem User eine Statusmeldung angezeigt  
+**Ausnahmefälle:** Drohne startet nicht weil Akkustand zu niedrig. Statusmeldung wird auf der App angezeigt  
+
+**Nr:** D 3  
+**Name:** Drohne landen  
+**Akteur:** User, Drohne, Smartphone  
+**Trigger:** User drückt den landen Button in der App   
+Akkustand der Drohne so niedrig, sodass sie automatisch den Landevorgang einleitet  
+Sprachbefehl landen  
+**Kurzbeschreibung:** Der User möchte die Drohne landen, um sie auszuschalten  
+**Vorbedingungen:** D 1, D 2  
+**Essenziele Schritte:** User bestätigt landen Button in der App  
+Drohne leitet Landevorgang ein
+Wenn der Vorgang abgeschlossen ist, wird dem User eine Statusmeldung angezeigt  
+**Ausnahmefälle:** kritischer Akkustand erreicht, wird automatischer Landevorgang eingeleitet und Statusmeldung ausgegeben auf der App  
+
+**Nr:** D 4  
+**Name:** Drohne navigieren  
+**Akteur:** Drohne, User, Smartphone  
+**Trigger:** User drückt eines der Navigationsbuttons der App  
+Sprachbefehle  
+**Kurzbeschreibung:** User möchte die Drohne im Raum navigieren, um andere Perspektiven zu bekommen  
+**Vorbedingungen:** D 1, D 2  
+**Essenziele Schritte:** User gibt Navigationsbefehle über die App an die Drohne  
+Drohne bewegt sich entsprechend  
+**Ausnahmefälle:** Navigationsbefehl wird nicht durchgeführt aufgrund von Kolisionsgefahr  
+Verbindungsabbruch  
+App stürzt ab  
+
+**Nr:** D 5  
+**Name:** Photo machen  
+**Akteur:** Drohne, User, Smartphone  
+**Trigger:** User drückt Photo Button  
+Sprachbefehl Photo machen  
+**Kurzbeschreibung:** User möchte ein Photo machen, um Daten von der Umgebung auswerten zu können  
+**Vorbedingungen:** D 1, D 2  
+**Essenziele Schritte:** User gibt den Befehl Photo machen an die Drohne  
+Drohne macht eine Aufnahme und sendet die Datei an das Smartphone  
+User bekommt Statusmeldung  
+**Ausnahmefälle:** Datei konnte nicht vollständig übertragen werden, auf der App wird dieser Status dem User angezeigt  
+
+**Nr:** D 6  
+**Name:** Lifevideofeed  
+**Akteur:** User, Smartphone, Drohne  
+**Trigger:** App wird gestartet  
+**Kurzbeschreibung:** Der User möchte sehen, was die Kamera der Drohne gerade sieht, um die Drohne navigieren zu können  
+**Vorbedingungen:** D 1, D 2  
+**Essenziele Schritte:** Drohne startet Videoübertragung zum Smartphone über WIFI  
+Smartphone empfängt Daten und spielt das Video in Echtzeit ab auf der App  
+**Ausnahmefälle:** Übertragungsprobleme: hohe Latenz, Verbindungsabbrüche, Störungen  
+Statusmeldung wird dem User ausgegeben  
+
+**Nr:** D 7  
+**Name:** GPS anfordern  
+**Akteur:** User, Smartphone, Drohne  
+**Trigger:** App fordert in einem Intervall GPS Infos von der Drohne  
+**Kurzbeschreibung:** User möchte Informationen über den Standort der Drohne aktuell auf der App ausgegeben bekommen,  um seiner Neugier willen  
+**Vorbedingungen:** D 1  
+**Essenziele Schritte:** App startet in regelmäßigen Abschnitten Anfragen an die Drohne  
+Drohne sendet Statusinformationen  
+App verarbeitet Informationen und zeigt sie auf dem Display an  
+**Ausnahmefälle:** Schlechte Verbindung zu Sateliten um GPS zu ermitteln  
+
+### AR
+
+**Nr:**  A1
+**Name:**  AR wird gestartet
+**Akteur:**  User, Smartphone, Drohne, Auto
+**Trigger:**  User startet die AR Funktion
+**Kurzbeschreibung:**  Der User startet die AR Funktion 
+**Vorbedingungen:**  
+**Essenziele Schritte:**  Der User startet die AR Funktion. In der App wird der Kamera Feed des Smartphones angezeigt. 
+**Ausnahmefälle:**  App erhält keine GPS Daten von Drohne oder Auto
+**Fragen:**  --
+
+**Nr:**  A2
+**Name:**  Marker werden gesetzt/aktualisiert
+**Akteur:**  User, Smartphone, Drohne, Auto
+**Trigger:**  App erhält GPS Infos
+**Kurzbeschreibung:**  Im Kamera Feed wird mithilfe der GPS Daten die Position der Drohne und des Autos angezeigt in AR
+**Vorbedingungen:**  A1
+**Essenziele Schritte:**  Die App erhält GPS Daten der Drohne und des Autos. In dem Kamera Feed wird mit AR das Auto und die Drohne angezeigt.
+**Ausnahmefälle:**  App erhält keine GPS Daten von Drohne oder Auto
+**Fragen:**  --
+
+**Nr:**  A3
+**Name:**  Pfad des Autos wird Angezeigt
+**Akteur:**  User, Smartphone, Drohne, Auto
+**Trigger:**  User startet die AR Funktion
+**Kurzbeschreibung:**  Mithilfe der GPS daten wird versucht den Weg des Autos darzustellen.
+**Vorbedingungen:**  A2
+**Essenziele Schritte:**  Marker für die Position des Autos und der Drohne werden Gesetzt. Ein möglicher Weg vom Auto zur Drohne wird erstellt. Der Weg wird im Kamera Feed durch AR angezeigt
+**Ausnahmefälle:**  App erhält keine GPS Daten von Drohne oder Auto
+**Fragen:**  --
 
 
+### Auto
 
+**Nr:** C1  
+**Name:** Auto und Smartphone verbinden  
+**Akteur:** Auto, Smartphone, User  
+**Trigger:** User startet die App
+**Kurzbeschreibung:** Das Smartphone verbindet sich über Bluetooth mit dem Auto  
+**Vorbedingungen:** --  
+**Essenzielle Schritte:** Die App starten, nach Bluetooth-Geräten suchen, mit dem Auto verbinden
+**Ausnahmefälle:** Die Bluetooth-Verbindung scheitert  
+**Fragen:**  
 
-    - Use-Case Diagramme
-    - Strukturierung der Diagramme in funktionale Gruppen
+**Nr:** C2  
+**Name:** Auto nach GPS fahren lassen  
+**Akteur:** Auto, Smartphone, Drohne  
+**Trigger:** Drohne erkennt ein Objekt  
+**Kurzbeschreibung:** Das Auto fährt automatisch zu den GPS-Koordinaten von der Drohne  
+**Vorbedingungen:** C1  
+**Essenzielle Schritte:** Die Drohne erkennt ein Objekt und sendet die PGS-Koordinaten an das Smartphone, Das Smartphone leitet die Daten an das Auto weiter, Das Auto fährt zu den GPS-Koordinaten
+**Ausnahmefälle:** Der Weg ist Blockiert, kein GPS-Sgnal  
+**Fragen:**  
+
+**Nr:** C3  
+**Name:** Objekten ausweichen  
+**Akteur:** Auto  
+**Trigger:** Ultraschallsensor
+**Kurzbeschreibung:** Das Auto erkennt Objekte mithilfe des Ultraschallsensors und weicht ihnen aus  
+**Vorbedingungen:**  C2
+**Essenzielle Schritte:** Ultraschallsensoren überwachen, Hindernissen ausweichen  
+**Ausnahmefälle:**  
+**Fragen:**  
 
 ## 2.3 Nicht-funktionale Anforderungen 
 
@@ -51,18 +195,24 @@ Das Softwaresysem ist kein autonomes System und kann nicht automatisch einen ber
 
 - Raspberry PI 3 b+
   - Bluetooth
-  - Rasbian 
+  - Raspbian
 
-- DJI Spark
+- DJI Spark Version 2019
   - Wlan
 
 - Smartphone
-  - Android
+  - Android 
   - Kamera
 
 ### 2.3.2 Betriebsbedingungen
 
-Android version 7.1
+Raspberry Pi mit raspbian
+- Version: April 2019 
+- Kernel: 4.14
+
+Android 
+- version 7.1
+
 
 ### 2.3.3 Qualitätsmerkmale
 
@@ -89,10 +239,8 @@ Stabilität |-|-|X|-
 Prüfbarkeit |-|-|X|-
 
 ## 2.4 Graphische Benutzerschnittstelle
-    - GUI-Mockups passend zu User Stories
-    - Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-    - Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-    - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
+
+![](./documentation/MockupApp.pdf)
 
 ## 2.5 Anforderungen im Detail
 
@@ -115,10 +263,14 @@ Prüfbarkeit |-|-|X|-
 | A1 | AR starten |Benutzer|die AR Funktion starten|ich die AR funktio nutzen kann| AR Bild angezeigt | Kann |
 | A2 | AR Marker setzen |Benutzer|mit der AR das Auto angezeigt haben|ich das Auto finden kann| AR Point vom Auto | Kann |
 | A3 | AR Pfad anzeigen |Benutzer|den Pfad des Autos sehen|damit ich den Pfad nachverfolgen kann| AR Pfad anzeigen | Kann |
+
 **Car**
+
 | Kennung | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 | :- |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-
+| C1 | Auto Verbinden | Benutzer | eine Verbindung mit dem Fahrzeug herstellen können | diese Verbindung vorhanden ist | Verbindung vorhanden | muss |
+| C2 | Auto GPS Steuern | Benutzer | das Fahrzeug mithilfe von GPS Koordinaten entsenden | Das Fahrzeug zum Zielort fährt | Fahrzeug fährt in die Richtung | muss |
+| C3 | Auto Objekte ausweichen | Benutzer | Das das Fahzeug objekten ausweicht | es nichts beschädigt | Objekte erkannt | muss |
 
 # 3 Technische Beschreibung
 
