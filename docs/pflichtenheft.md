@@ -380,7 +380,7 @@ Entwickelt eine Schnittstelle zum erkennen von Objekten vor dem Fahrzeug.
 * KW 26 (26.06) / Implementation fertig
   * manuelle Abnahmetests
   * Verbindung der Systeme manuell testen
-* KW 27 (03.07) / Vorstellung
+* KW 27 (25.06) / Vorstellung
   * Präsentation / Software-Demo
 
 # 5 Anhänge
