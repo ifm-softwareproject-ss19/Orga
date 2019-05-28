@@ -302,7 +302,10 @@ Kommunikation
 
 ![](./documentation/diagrams/MainCarActivities.svg)
 
+![](./documentation/diagrams/statechartraspberry.jpg)
+
 ## 3.6 Entwurf
+
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
 
 # 4 Projektorganisation
