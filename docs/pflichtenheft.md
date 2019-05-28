@@ -358,11 +358,11 @@ Entwickelt eine Schnittstelle zum erkennen von Objekten vor dem Fahrzeug.
 * KW 20 (13.05) / Projekt aufsetzen
   * Repository Struktur
 * KW 20 (19.05) / Grundfunktionalität
-  * D1, D2, D3, A1
+  * D1, D2, D3, A1, C1
   * Tests sind spezifiziert 
   * Tests laufen erfolgreich durch
 * KW 21 (26.05) / Erste Starts
-  * D4, D5, D6, A2
+  * D4, D5, D6, A2, C2
   * Tests sind spezifiziert
   * Tests laufen erfolgreich durch
 * KW 22 (31.05) / Tests sind Fertig
