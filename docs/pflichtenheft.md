@@ -240,7 +240,7 @@ Prüfbarkeit |-|-|X|-
 
 ## 2.4 Graphische Benutzerschnittstelle
 
-![](./documentation/MockupApp.pdf)
+[Mockups als pdf](./documentation/MockupApp.pdf)
 
 ## 2.5 Anforderungen im Detail
 
