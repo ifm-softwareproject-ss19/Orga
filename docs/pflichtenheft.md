@@ -320,7 +320,7 @@ Keine Daten werden persistieren.
 | Softwarebaustein | Person(en) |
 |----------|-----------|
 | Drohnen Steuerung | Jakob Tissen | 
-| AR | Nick Friedrich |
+| AR |  Nick Friedrich |
 | Fahrzeugstruktur | Kevin Gerzen | 
 | Kollisionschecker | Andre Grellmann |
   
@@ -344,8 +344,8 @@ Entwickelt eine Schnittstelle zum erkennen von Objekten vor dem Fahrzeug.
 | Name     | Rolle     |
 |----------|-----------|
 | Alexander Heinisch | Projektleiter |
-| Nick Friedrich | Fahrzeug Sensor Beauftragter |
-| Andre Grellmann | AR Beauftragter |
+| Nick Friedrich | AR Beauftragter |
+| Andre Grellmann | Fahrzeug Sensor Beauftragter |
 | Jakob Tissen | Drohnenbeauftragter |
 | Kevin Gerzen | Fahrzeug Beauftragter |
 
