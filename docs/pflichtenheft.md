@@ -296,10 +296,6 @@ Keine Daten werden persistieren.
 
 ## 3.5 Abläufe
 
-Kommunikation 
-    - Aktivitätsdiagramme für relevante Use Cases
-    - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-
 ![](./documentation/diagrams/MainCarActivities.svg)
 
 ![](./documentation/diagrams/statechartraspberry.jpg)
