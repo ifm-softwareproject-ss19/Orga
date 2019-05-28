@@ -388,7 +388,14 @@ Entwickelt eine Schnittstelle zum erkennen von Objekten vor dem Fahrzeug.
     - Definitionen, Abkürzungen, Begriffe
 
 ## 5.2 Referenzen
-    - Handbücher, Gesetze
+
+Handbücher:
+    ![Raspberry Pi Dokumentation](https://www.raspberrypi.org/documentation/)    
+    ![DJI Spark Handbuch sowie Sicherheitsanweisungen](https://www.dji.com/de/spark/info#downloads)
+    ![Ultraschall Sensor HC-SR04](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+
+Gesetze:
+    https://www.bmvi.de/SharedDocs/DE/Artikel/LF/151108-drohnen.html
 
 ## 5.3 Index
 
