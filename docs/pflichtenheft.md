@@ -30,7 +30,7 @@ Das Softwaresysem ist kein autonomes System und kann nicht automatisch einen ber
 
 | Funktion | Name | Kontakt | Verfügbarkeit | Wissen  | Interesse & Ziele  | Relevanz  |
 |---|---|---|---|---|---|---|
-| Projektleiter | Alexander Heinisch | aheinisch@fh-bielefeld.de | Per E-Mail, tagsüber | Kennt embeddedd Systems                         | Vereinfachung der Ausleihprozesse  |  |
+| Projektleiter | Alexander Heinisch | aheinisch@fh-bielefeld.de | Per E-Mail, tagsüber | Kennt embeddedd Systems                         | |  |
 
 
 
@@ -308,12 +308,25 @@ Keine Daten werden persistieren.
 
 ## 4.1 Annahmen
 
+Quellcode und Dokumentation nur in Englisch.
+Zur Android programmierung wir die Programmiersprache Java verwendet und als Entwicklungsumgebung Android Studio Version 3+.
 
-    - Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
-    - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
-    - Aufteilung in Git-Repositories gemäß Software- und Systemarchitektur und Softwarebbausteinen 
-    - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
-    - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
+Für die Programmierung des Raspberry PIs wird die Programmiersprache c++.
+
+Das Projekt wird in einer gut einsehbaren Umgebung getestet.
+Das Fahrzeug wird auf einen für das Fahrzeug geeigneten Boden getestet.(Kein Wasser, Keine schlaglöcher, Keine grossen Unebenheiten)
+
+Die Aufteilung der Systeme ist wie folgt:
+    - Arduino repo -> AR, Drohn, Smartphone App
+    - Raspberry repo -> Sensor und Fahzeugsteuerung
+
+verwendete SDKs
+    - DJI sdk version X
+    - AR ?
+    - Wiring PI
+
+In den Git Repositories wird der Github flow verwendet welcher besagt der Master ist der Dev Branch und Produktiv Branch. Es gibt Themen Branches welche genau eine Aufgabe bzw eine funktionale erweeiterung mit sich bringen (z.b. Drohne verbindung programmieren).
+
 
 ## 4.2 Verantwortlichkeiten
 
