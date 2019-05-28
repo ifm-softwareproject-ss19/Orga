@@ -18,7 +18,7 @@ public void stopManualDrive();
 
 public void emergencyStop();
 
-public void continue();
+public void continueDriving();
 
 public void manualDirection(Drive direction1, Steering direction2);
 
