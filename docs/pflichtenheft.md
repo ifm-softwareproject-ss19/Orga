@@ -13,8 +13,7 @@ Source Repositories
 
 ## 1.1 Beschreibung
 
-
-Ein System womit ein Fahrzeug zu dem Standort einer Drohne fahren kann. In diesem System soll es möglich sein auf dem Smartphone visuell die position der Drohne bzw des Fahrzeuges zu sehen. 
+Drone and Drive ist ein System womit ein Fahrzeug zu dem Standort einer Drohne fahren kann. In diesem System soll es möglich sein auf dem Smartphone visuell die position der Drohne bzw des Fahrzeuges zu sehen. 
 
 ## 1.2 Ziele
 
@@ -321,9 +320,9 @@ Die Aufteilung der Systeme ist wie folgt:
     - Raspberry repo -> Sensor und Fahzeugsteuerung
 
 verwendete SDKs
-    - DJI sdk version X
-    - AR ?
+    - DJI sdk version 4.10
     - Wiring PI
+	- Android sdk 23
 
 In den Git Repositories wird der Github flow verwendet welcher besagt der Master ist der Dev Branch und Produktiv Branch. Es gibt Themen Branches welche genau eine Aufgabe bzw eine funktionale erweeiterung mit sich bringen (z.b. Drohne verbindung programmieren).
 
@@ -389,10 +388,12 @@ Entwickelt eine Schnittstelle zum erkennen von Objekten vor dem Fahrzeug.
   * AR Zeigt Fahrzeug position an
 * KW 24 (14.06) / Feld Test
   * Feld Test
-* KW 26 (26.06) / Implementation fertig
+* KW 26 (21.06) / Implementation fertig
   * manuelle Abnahmetests
   * Verbindung der Systeme manuell testen
-* KW 27 (25.06) / Vorstellung
+* KW 27 (25.06) / Vorstellung ( Verschoben ) 
+  * 
+* KW 28 (02.06) / Vorstellung
   * Präsentation / Software-Demo
 
 # 5 Anhänge
